@@ -10,7 +10,7 @@ export function NavbarIcon(
   return (
     <Link
       {...props}
-      className={`pt-12 pb-2 hover:text-orange-700  ${
+      className={`pt-8 pb-2 hover:text-orange-700  ${
         pathName === props.href && "text-orange-700"
       }`}
     >
