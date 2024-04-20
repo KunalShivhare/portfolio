@@ -80,7 +80,7 @@ const VoxelDog = () => {
         setLoading(false);
       });
 
-      let req = null;
+      let req: number | null = null;
       let frame = 0;
       const animate = () => {
         req = requestAnimationFrame(animate);
