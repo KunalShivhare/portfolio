@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import Section from "../components/animated/section";
-import Paragraph from "../components/animated/paragraph";
-import { Navbar } from "@/components/navbar/navbar";
+import Section from "@/components/animated/section";
+import Paragraph from "@/components/animated/paragraph";
 import VoxelDog from "@/components/model/voxel-dog";
 
 export default function Home() {
@@ -10,7 +9,7 @@ export default function Home() {
     <div className="max-w-3xl">
       <VoxelDog />
       <div className="rounded-lg bg-[#363638] p-3 mb-6 text-center">
-        Hello, I'm a full-stack developer based in India!
+        Hello, I&apos;m a full-stack developer based in India!
       </div>
 
       <div className="md:flex md:justify-center">
