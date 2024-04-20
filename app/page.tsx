@@ -1,35 +1,48 @@
+import Image from "next/image";
+import Section from "../components/animated/section";
+import Paragraph from "../components/animated/paragraph";
+import { Navbar } from "@/components/navbar/navbar";
+
 export default function Home() {
   return (
-    <>
-      <div className="max-w-screen-2xl mx-auto">
-        <div className="h-[1px] border-[1px] border-white"></div>
-        <div className="mt-[12%]">
-          <div className="flex justify-center py-2">
-            <div className="flex-col mr-[30%]">
-              <div className=" bg-orange-700 rounded-lg text-center p-5 w-[150px] ">
-                Hello, I am
-              </div>
-              <div className="absolute ml-2 overflow-hidden">
-                <div className="h-3 w-4 origin-top-right rotate-45 transform  bg-orange-700"></div>
-              </div>
-            </div>
-          </div>
-          <div className="font-bold font-serif sm:text-7xl text-3xl text-center">
-            Kunal Shivhare
-            <div className="font-bold font-serif sm:text-lg text-md">
-              Professional Full-Stack Developer
-            </div>
-          </div>
-          <div className="flex justify-center gap-3 mt-4">
-            <button className="p-3 bg-orange-700 text-white rounded-lg w-[150px]">
-              Download CV
-            </button>
-            <button className="p-3 border-[1px] text-white rounded-lg w-[130px] shadow-md shadow-white">
-              My Work
-            </button>
-          </div>
+    <div className="max-w-3xl">
+      <div className="rounded-lg bg-[#363638] p-3 mb-6 text-center">
+        Hello, I'm a full-stack developer based in India!
+      </div>
+
+      <div className="md:flex md:justify-center">
+        <div className="flex-grow-1 ">
+          <h2 className=" text-[2.5em] font-bold font-serif">Kunal Shivhare</h2>
+          <p>Software Engineer ( Team Lead / Developer / Programmer )</p>
+        </div>
+        <div className="flex-shrink-0 mt-4 text-center md:-mt-2 md:ml-6 ">
+          <Image
+            src={require("./profile.jpg")}
+            width={100}
+            height={100}
+            className="border-whiteAlpha-800 border-2 border-solid w-[100px] h-[100px] inline-block rounded-full overflow-hidden"
+            alt="Profile"
+          />
         </div>
       </div>
-    </>
+
+      <Section delay={0.1}>
+        <h1 className="underline decoration-[#525252] underline-offset-8 font-semibold mb-4 text-lg">
+          Work
+        </h1>
+        <Paragraph>
+          Kunal is Team Lead and a full-stack developer based in India with a
+          passion for building digital services/stuff he wants. He has a knack
+          for all things launching products, from planning and designing all the
+          way to solving real-life problems with code. When not online, he loves
+          to play video games. Currently, he is a working professional at
+          <a href="https://www.badho.in" className="text-pink-400">
+            {" "}
+            Badho
+          </a>
+          .
+        </Paragraph>
+      </Section>
+    </div>
   );
 }

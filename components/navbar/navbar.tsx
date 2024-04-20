@@ -13,45 +13,49 @@ export function Navbar() {
   };
 
   return (
-    <nav className="max-w-screen-2xl mx-auto px-4 sm:px-6 sm:pt-0 flex justify-between items-end">
-      <NavbarIcon href={"/"} />
-      <div className="hidden sm:flex">
-        <NavbarLinks href={"/projects"}>Projects</NavbarLinks>
-        <NavbarLinks href={"/blogs"}>Blogs</NavbarLinks>
-        <NavbarLinks href={"/about"}>About</NavbarLinks>
-        <NavbarLinks href={"/hire"}>Hire Me!</NavbarLinks>
-      </div>
-      <div
-        onClick={handleOnClickMenu}
-        className="flex sm:hidden cursor-pointer pb-2"
-      >
-        <MenuOutlined size={25} />
-      </div>
-      <div
-        className={
-          menuOpen
-            ? "fixed right-0 top-0 w-[100%] sm:hidden h-screen bg-black ease-in duration-200"
-            : "fixed right-[-100%] top-0 h-screen ease-in duration-200"
-        }
-      >
-        <div className="flex w-full items-center justify-end pt-10 pr-10">
-          <div className="cursor-pointer">
-            <CloseOutlined
-              onClick={handleOnClickMenu}
-              size={25}
-              style={{
-                color: "#fff",
-              }}
-            />
+    <div className="w-[100%] backdrop-blur-[10px] z-10 ">
+      <nav className="flex justify-normal items-stretch border-2 border-red-50">
+        <div className="flex max-w-3xl p-2 items-center justify-between">
+          <div className="mr-20">
+            <h1 className="tracking-tighter font-mono">Kunal Shivhare</h1>
           </div>
+          <div className="hidden w-full flex-grow items-center md:flex md:w-auto">
+            <NavbarLinks href={"/projects"}>Projects</NavbarLinks>
+            <NavbarLinks href={"/blogs"}>Blogs</NavbarLinks>
+          </div>
+          <div
+            onClick={handleOnClickMenu}
+            className="md:hidden cursor-pointer px-2 py-1 border-[1px] border-gray-400 rounded-md"
+          >
+            <MenuOutlined size={10} />
+          </div>
+          {/* <div
+          className={
+            menuOpen
+              ? "fixed right-0 top-0 w-[100%] md:hidden h-screen bg-black ease-in duration-200"
+              : "fixed right-[-100%] top-0 h-screen ease-in duration-200"
+          }
+          >
+            <div className="flex w-full items-center justify-end pt-10 pr-10">
+              <div className="cursor-pointer">
+                <CloseOutlined
+                  onClick={handleOnClickMenu}
+                  size={25}
+                  style={{
+                    color: "#fff",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="pt-10 items-center">
+              <MenuItem href={"/projects"}>Projects</MenuItem>
+              <MenuItem href={"/blogs"}>Blogs</MenuItem>
+              <MenuItem href={"/about"}>About</MenuItem>
+              <MenuItem href={"/contact"}>Contact Me!</MenuItem>
+            </div>
+          </div> */}
         </div>
-        <div className="pt-10 items-center">
-          <MenuItem href={"/projects"}>Projects</MenuItem>
-          <MenuItem href={"/blogs"}>Blogs</MenuItem>
-          <MenuItem href={"/about"}>About</MenuItem>
-          <MenuItem href={"/contact"}>Contact Me!</MenuItem>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }

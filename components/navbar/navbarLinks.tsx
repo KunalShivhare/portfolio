@@ -10,11 +10,8 @@ export function NavbarLinks(
   return (
     <Link
       {...props}
-      className={`pt-8 px-4 pb-2
-      hover:bg-orange-700 
-      focus-visble:bg-orange-700 ${
-        currentPathName === props.href && "bg-orange-700"
-      }`}
+      className={`px-2
+       ${currentPathName === props.href && "bg-[#A0E5D9] text-[#202023]"}`}
     ></Link>
   );
 }
